@@ -27,7 +27,11 @@ def roll(roll_number):
 def throws():
     roll_number = 5
     dice = roll(roll_number)
-    result = _extracted_from_throws_(dice)
+    dice.sort()
+    for i in range(len(dice)):
+        print ("Dice", i + 1, ":", dice[i])
+        
+    result = hand(dice)
     print ("You currently have", names[result])
 
     while True:
