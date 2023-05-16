@@ -50,29 +50,23 @@ def _extracted_from_throws_(rerolls, dice):
 
     return _extracted_from_throws_(dice)
 
-# TODO Rename this here and in `throws`
-def _extracted_from_throws_(dice):
-    dice.sort()
-    for i in range(len(dice)):
-        print ("Dice", i + 1, ":", dice[i])
-    return hand(dice)
 
 def throws():
     roll_number = 5
     dice = roll(roll_number)
     result = _extracted_from_throws_(dice)
-    print ("You currently have", names, result)
+    print (names, "\n" "You currently have", result)
 
     while True:
-        rerolls = int(input("How many dice do you want to throw again?"))
+        rerolls = int(input("How many dice do you want to throw again?: "))
         with contextlib.suppress(ValueError):
             if rerolls in {1, 2, 3, 4, 5}:
                 break
         print ("Oops! I didn't understand that. Please enter 1, 2, 3, 4, or 5.")
 
     if rerolls != 0:
-        result = _extracted_from_throws_(rerolls, dice)
-    print ("You finish with", names[result])
+        result = _extracted_from_throws_(rerolls)
+    print ("You finish with", names, result)
 
 
 def hand(dice):
@@ -103,6 +97,13 @@ def hand(dice):
             print("Un par")
     else:
         print("Una carta alta")
+
+# TODO Rename this here and in `throws`
+def _extracted_from_throws_(dice):
+    dice.sort()
+    for i in range(len(dice)):
+        print ("Dice", i + 1, ":", dice[i])
+    return hand(dice)
 
 
 def play_again():
