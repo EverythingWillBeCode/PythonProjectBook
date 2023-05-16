@@ -75,3 +75,55 @@ def gui():
     player_choice.set(1)
     player_score = IntVar()
     computer_score = IntVar()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    root.mainloop()
+rps_frame = Frame(rps_window, padding = "3 3 12 12", width = 300)
+rps_frame.grid(column=0, row = 0, sticky=(N,W,E,S))
+rps_frame.columnconfigure(0, weight=1)
+rps_frame.rowconfigure(0,weight=1)
+Label(rps_frame, text="Player").grid(column=1, row = 1, sticky = W)
+Radiobutton(rps_frame, text ="Rock", variable = player_choice, value = 1).grid(column=1, row=2, sticky=W)
+Radiobutton(rps_frame, text ="Paper", variable = player_choice, value = 2).grid(column=1, row=3, sticky=W)
+Radiobutton(rps_frame, text ="Scissors", variable = player_choice, value = 3).grid(column=1, row=4, sticky=W)
+Label(rps_frame, text="Computer").grid(column=3, row = 1, sticky = W)
+Label(rps_frame, textvariable = computer_choice).grid(column=3, row=3, sticky = W)
+Button(rps_frame, text="Play", command = start).grid(column = 2, row = 2)
+Label(rps_frame, text = "Score").grid(column = 1, row = 5, sticky = W)
+Label(rps_frame, textvariable = player_score).grid(column = 1, row = 6, sticky = W)
+Label(rps_frame, text = "Score").grid(column = 3, row = 5, sticky = W)
+Label(rps_frame, textvariable = computer_score).grid(column = 3, row = 6, sticky = W)
+Label(rps_frame, textvariable = result_set).grid(column = 2, row = 7)
+if __name___ == "__main__":
+        gui()
