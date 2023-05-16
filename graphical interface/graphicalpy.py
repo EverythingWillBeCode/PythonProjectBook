@@ -1,5 +1,6 @@
 from tkinter import *
-
+from ttk import *
+import random
 import Rock_Paper_Scissors
 import Hangman
 import Poker
