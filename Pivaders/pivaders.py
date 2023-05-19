@@ -63,7 +63,7 @@ class Alien(pygame.sprite.Sprite):
 
 
 class Ammo(pygame.sprite.Sprite):
-    def __init__(self, color, (width, height)):
+    def __init__(self, color,width, height):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface([width, height])
         self.image.fill(color)
@@ -78,7 +78,7 @@ class Ammo(pygame.sprite.Sprite):
 
 
 class Block(pygame.sprite.Sprite):
-    def __init__(self, color, (width, height)):
+    def __init__(self, color,width, height):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface([width, height])
         self.image.fill(color)
