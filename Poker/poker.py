@@ -47,7 +47,7 @@ def throws():
     else:
         roll_number = rerolls
         dice_rerolls = roll(roll_number)
-        dice_changes = range(rerolls)
+        dice_changes = list(range(rerolls))
         print ("Enter the number of a dice to reroll: ")
         iterations = 0
     while iterations < rerolls:
@@ -67,7 +67,7 @@ def throws():
         dice[dice_changes[iterations - 1]] = replacement
     dice.sort()
     for i in range((len(dice))):
-        print("Dice",i + 1, ":", names[dice[i]])
+        print("Dice",i + 1, ":", names, dice[i])
     
     result = hand(dice)
     print("You finish with ", result)
