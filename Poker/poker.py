@@ -41,7 +41,7 @@ def throws():
             if rerolls in {1, 2, 3, 4, 5}:
                 break
         print ("Oops! I didn't understand that. Please enter 1, 2, 3, 4, or 5.")
-
+#hola
     if rerolls == 0:
         print("You finish with ", result)
     else:
